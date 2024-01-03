@@ -1,0 +1,17 @@
+---
+- name: update apt-get repo and cache
+  apt : update_cache=yes force_apt_get=yes cache_vaild_time=3600
+- name: install maridb
+  apt: 
+    name: mariadb-server
+    state: present
+- name: install php_mysql
+  apt: 
+    name: php-mysql
+    state: latest
+- name: start mariadb
+  service:
+     name: mariadb
+     state: started
+     enabled: yes
+  
