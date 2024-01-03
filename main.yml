@@ -1,0 +1,4 @@
+---
+- include_tasks: apache2.yml
+- include_tasks: php.yml
+- include_tasks: mysql.yml
